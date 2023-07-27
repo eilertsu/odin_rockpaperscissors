@@ -1,3 +1,7 @@
+let playerSelection;
+let computerSelection;
+
+
 function getComputerChoice() {
     let num = Math.random()
     if (num <= 0.33){
@@ -7,4 +11,14 @@ function getComputerChoice() {
     }else{
         return "Scissors"
     }
+}
+
+function playRound(playerSelection, computerSelection){
+    switch (playerSelection){
+        case{}:
+    }
+}
+
+function getPlayerChoice(){
+    prompt("Type either 'rock', 'paper' or 'scissors'")
 }
