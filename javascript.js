@@ -36,13 +36,13 @@ function game(){
             }else if(playerSelection == "scissors" && computerSelection == "scissors"){
                 return "Its a draw" 
             }
-        }
+        } 
         
         const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
 
         console.log(playRound(playerSelection, computerSelection))
-    }
+    }return ""
 }
 
 
