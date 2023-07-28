@@ -1,4 +1,4 @@
-function game(){
+function startGame(){
     for(i = 0; i < rounds; i++){
         function getComputerChoice() {
             let num = Math.random()
@@ -54,4 +54,4 @@ function getRounds() {
 const rounds = getRounds()
 
 
-console.log(game())
+console.log(startGame())
