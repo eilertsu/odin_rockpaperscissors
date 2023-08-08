@@ -46,12 +46,4 @@ function startGame(){
 }
 
 
-function getRounds() {
-    let input = prompt("How many rounds do you wish to play?")
-    return input
-}
-
-const rounds = getRounds()
-
-
-console.log(startGame())
+let rounds;
