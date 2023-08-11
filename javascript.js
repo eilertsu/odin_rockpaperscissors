@@ -40,12 +40,13 @@ function playRound(playerSelection, computerSelection){
 
 function getRounds() {
     let input = prompt("How many rounds do you wish to play?")
+    if (input )
     return input
 }
 
 
 const computerSelection = getComputerChoice()
-const rounds = getRounds()
+let rounds = parseInt(getRounds())
 let roundsPlayed = 0;
 let winnerOfRound;
 let winnerOfGame;
@@ -76,7 +77,7 @@ function countPoints(){
     } else {
         return ""
     }
-    return "Your points: "+ playerPoints+ "\nComputers points: "+computerPoints
+    return "Your points: "+ playerPoints+ "\nComputers points: "+computerPoints; 
 }
 
 buttons.forEach((button) => {
@@ -86,6 +87,9 @@ buttons.forEach((button) => {
             message.innerText = playRound(playerSelection, computerSelection)
             points.innerText = countPoints()
             counter.innerText = countRounds()
+            if (roundsPlayed == rounds){
+                alert (winnerOfGame)
+            }
         }
     })
 });
@@ -94,4 +98,11 @@ buttons.forEach((button) => {
 
 if (rounds < 1){
     getRounds()
+}
+if (playerPoints > computerPoints){
+    winnerOfGame = "Player"
+} else if (computerPoints > playerPoints){
+    winnerOfGame = "Computer"
+} else if (computerPoints == playerPoints){
+    winnerOfGame = "Its a draw"
 }
